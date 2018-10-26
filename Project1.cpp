@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include "Sum.h"
 #include "SumList.h"
 #include "Day.h"
 #include "Week.h"
@@ -24,10 +23,10 @@ int main()
 	{
 		cout << "\nPlease input a Blood Sugar Reading (mg/dl): ";
 		cin >> input;
-		
+
 		if (input._Equal("D") || input._Equal("Day") || input._Equal("d") || input._Equal("day"))
 		{
-			cout << "* * * * * * Summary for Day"<<daycounter<<" * * * * * *\n\n";
+			cout << "* * * * * * Summary for Day" << daycounter << " * * * * * *\n\n";
 			if (daycounter < 8)
 			{
 				week1->getDay(daycounter)->printAll();
@@ -50,9 +49,9 @@ int main()
 				week2->printWeek();
 			}
 		}
-		else if (input._Equal("N"))
+		else if (input._Equal("N") || input._Equal("n") || input._Equal("Next") || input._Equal("next"))
 		{
-			if(daycounter<=14)
+			if (daycounter < 14)
 			{
 				daycounter++;
 			}
@@ -71,7 +70,7 @@ int main()
 				{
 					week1->getDay(daycounter)->inputData(num);
 				}
-				if (daycounter >= 8 && daycounter <15)
+				if (daycounter >= 8 && daycounter < 15)
 				{
 					week2->getDay(daycounter)->inputData(num);
 				}
