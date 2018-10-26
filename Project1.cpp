@@ -52,7 +52,14 @@ int main()
 		}
 		else if (input._Equal("N"))
 		{
-			daycounter++;
+			if(daycounter<=14)
+			{
+				daycounter++;
+			}
+			else
+			{
+				daycounter = 1;
+			}
 			cout << "switching to next day\n";
 		}
 		else
