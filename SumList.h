@@ -5,6 +5,9 @@
 #include <iostream>
 using std::cout;
 
+// This sum works by filling up an int to max and then rolling the number over every time it fills up and then incrementing a counter
+// once the counter fills up it will dynamically add a new counter to count how many times that node rolled over working essentially like a
+// base 2,147,483,647 counter that automatically creates new digits as they are needed.
 
 class SumList
 {
